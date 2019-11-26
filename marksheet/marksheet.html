@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=>, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="marksheet.css"/>
+        <title> MarkSheet </title>
+        <h2> MarkSheet </h2>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="3">Course </td>
+          <td rowspan="2"> Semester </td>
+          <td rowspan="2"> Credits </td>
+      
+        </tr>
+        <tr>
+          <td>Code </td>
+          <td colspan="2"> Name </td>
+       
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BSCS 225 </td>
+          <td colspan="2" >KUBERNETES </td>
+          <td> Fall 2019</td>
+          <td id="k">  </td>
+        
+        </tr>
+        <tr>
+          <td>BSCS 105 </td>
+          <td colspan="2" >HTML </td>
+          <td> Fall 2019</td>
+          <td id="h"> </td>
+          
+        </tr>
+        <tr>
+          <td>BSCS 310 </td>
+          <td colspan="2" >CSS </td>
+          <td> Fall 2019</td>
+          <td id="c"> </td>
+      
+        </tr>
+        <tr>
+          <td>BSCS 373 </td>
+          <td colspan="2" >JS</td>
+          <td> Fall 2019</td>
+          <td id="j"> </td>
+         
+        </tr>
+        <tr>
+          <td>BSCS 225 </td>
+          <td colspan="2" >DOCKER </td>
+          <td> Fall 2019</td>
+          <td id="d">  </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="footer">Total</td>
+          <td id="tot">  </td>
+          <td colspan="2" id="per"> </td>
+         
+        </tr>
+    </table>
+  </body>
+
+  <script> 
+    
+    
+      var KUBERNETES = parseInt (prompt ("Marks obtained in KUBERNETES out of 100"));
+      var HTML = parseInt (prompt ("Marks obtained in HTML out of 100"));
+      var CSS = parseInt (prompt  ("Marks obtained in CSS of 100"));
+      var JS = parseInt (prompt ("Marks obtained in JS of 100")); 
+      var DOCKER = parseInt (prompt ("Marks obtained in DOCKER of 100"));
+
+        var Total = parseInt (KUBERNETES+HTML+CSS+JS+DOCKER);
+                      
+            alert("Total Marks Obtained = " + Total)
+              var Percentage = Total/500*100;
+                alert("Congratulation!! You Obtained" + " " + Percentage+"%");
+                  alert(  "Marksheet\n" +  "1. KUBERNETES = " +KUBERNETES+" \n2. HTML =" +HTML+ "\n3. CSS =" +CSS+ "\n4. JS=" +JS+ "\n5. DOCKER =" +DOCKER+ "\n\t\t THE TOTAL MARKS :" + Total + "/500" + "\n\t\t PERCENTAGE :" +Percentage+ "%" + "\n\t\t" + "Congratulation!!")
+      
+      window.document.getElementById("k").innerHTML = KUBERNETES;
+        window.document.getElementById("h").innerHTML = HTML;
+          window.document.getElementById("c").innerHTML =  CSS;
+            window.document.getElementById("j").innerHTML =  JS;
+               window.document.getElementById("d").innerHTML =  DOCKER;
+                  window.document.getElementById("per").innerHTML =  Percentage +"%";
+                  window.document.getElementById("tot").innerHTML =  Total;
+                      </script>
+
+  </html>
